@@ -12,9 +12,9 @@ var app = express();
 process.env.MONGODB_URI = 'production';
 
 // Models
-var Comments = require("./models/Comments.js");
-var News = require("./models/News.js");
-var Users = require("./models/Users.js");
+var comments = require("./models/comments.js");
+var news = require("./models/news.js");
+var users = require("./models/users.js");
 
 // Static directory
 app.use(express.static("public"));
