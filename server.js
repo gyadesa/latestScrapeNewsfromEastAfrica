@@ -6,7 +6,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 //var Promise = require("bluebird");
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 process.env.MONGODB_URI = 'production';
@@ -19,7 +19,8 @@ var users = require("./models/users.js");
 // Static directory
 app.use(express.static("public"));
 
-// Handlebars
+// Creating the Handlebars View Engine
+//======================================
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
@@ -30,7 +31,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 mongoose.Promise = Promise;
 if (process.env.MONGODB_URI === 'production') {
     console.log('node env is', process.env.MONGODB_URI);
-   
    mongoose.connect("mongodb://localhost/week18Populater");
 } else {
     console.log('node env is', process.env.MONGODB_URI);

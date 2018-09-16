@@ -2,14 +2,20 @@
     font-family: BBCTV;
     src: url(BBC_TV.ttf);
 }
-
+.jumbotron {
+    background-image: url(../images/headerbackground.jpg);
+    background-size: cover;
+	background-repeat:no-repeat;
+}
 body {
     background-image: url(../images/background.jpg);
+    background-size: cover;
+	background-repeat:no-repeat;
 }
 
 html,
 body {
-    height: 100%;
+    height: auto;
 }
 
 .fill {
@@ -28,7 +34,7 @@ body {
 }
 
 .title-container {
-    background-color: #6a93df;
+    background-color: black;
 }
 
 .main-container {
@@ -73,19 +79,19 @@ body {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
     background-color: white;
 }
 
 .collapsible-body,
 .news-body {
-    background-color: gray;
+    background-color: rgb(222, 245, 242);
 }
 
 .article-title,
 .user-title {
-    color: #2f5049;
+    color: black;
     padding: 15px;
     font-size: 30px;
     font-family: 'Days One', sans-serif;
@@ -107,7 +113,9 @@ body {
 }
 
 .footer-container {
-    background-color: #6a93df;
+    background-image: url(../images/footerbackground.jpg);
+    background-size: cover;
+	background-repeat:no-repeat;
     color: white;
     padding: 20px 20px 1px 20px;
     font-size: 30px;
